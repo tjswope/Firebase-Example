@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Firebase Example
+//  FireDrill
 //
-//  Created by Swope, Thomas on 4/30/21.
+//  Created by Swope, Thomas on 2/4/21.
 //  Copyright © 2021 Swope, Thomas. All rights reserved.
 //
 
@@ -12,7 +12,8 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var userInfo = UserInfo()
+    var user = UserViewModel()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -21,6 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
+            .environmentObject(userInfo)
+            .environmentObject(user)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

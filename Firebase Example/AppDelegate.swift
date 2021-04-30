@@ -1,12 +1,13 @@
 //
 //  AppDelegate.swift
-//  Firebase Example
+//  FireDrill
 //
-//  Created by Swope, Thomas on 4/30/21.
+//  Created by Swope, Thomas on 2/4/21.
 //  Copyright © 2021 Swope, Thomas. All rights reserved.
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         return true
     }
 
